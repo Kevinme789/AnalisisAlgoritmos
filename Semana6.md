@@ -51,44 +51,44 @@ Para n = 4
 
 #### Análisis
 
-\[
+```math
 T(n) = \sum*{i=1}^{n-1} \sum*{j=i+1}^{n} \sum\_{k=1}^{j} 1
-\]
+```
 
-\[
+```math
 T(n) = \sum*{i=1}^{n-1} \sum*{j=i+1}^{n} j
-\]
+```
 
-\[
+```math
 T(n) = \sum*{j=2}^{n} \sum*{i=1}^{j-1} j = \sum*{j=2}^{n} (j - 1) \cdot j = \sum*{j=2}^{n} (j^2 - j)
-\]
+```
 
-\[
+```math
 T(n) = \sum*{j=2}^{n} j^2 - \sum*{j=2}^{n} j
-\]
+```
 
 Sabemos que:
 
-\[
+```math
 \sum*{j=1}^{n} j^2 = \frac{n(n+1)(2n+1)}{6}, \quad \sum*{j=1}^{n} j = \frac{n(n+1)}{2}
-\]
+```
 
 Por tanto:
 
-\[
+```math
 T(n) = \frac{n(n+1)(2n+1)}{6} - 1 - \left( \frac{n(n+1)}{2} - 1 \right)
-\]
+```
 
-\[
+```math
 T(n) = \frac{n(n+1)(2n+1)}{6} - \frac{n(n+1)}{2}
-\]
+```
 
-\[
+```math
 T(n) = \frac{n(n+1)}{6}[(2n+1) - 3] = \frac{n(n+1)(2n - 2)}{6} = \frac{n(n+1)(n-1)}{3}
-\]
+```
 
 #### Verificación para n = 4
 
-\[
+```math
 T(4) = \frac{4 \cdot 5 \cdot 3}{3} = \frac{60}{3} = 20 \quad \text{✔️ Se cumple}
-\]
+```
